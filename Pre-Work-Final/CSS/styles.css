@@ -1,0 +1,126 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+h1 {
+  color: rgb(0, 34, 13);
+  font-style: helvetica;
+}
+h2,
+h3 {
+  color: rgb(69, 32, 85);
+  font-family: Goldman;
+}
+#greet {
+  font-size: 4em;
+}
+.navi {
+  padding: 0 2em;
+  border: 2px solid white;
+  border-radius: 12px;
+  margin: 2em;
+}
+#name {
+  text-decoration: underline;
+  font-size: 2em;
+}
+p {
+  font-size: 2em;
+  color: rgb(74, 25, 129);
+}
+
+li {
+  font-size: 2em;
+}
+body {
+  background-color: #85dcb8;
+  margin: 10px;
+}
+.button {
+  padding: 7px 15px;
+  border-radius: 10%;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button1 {
+  background-color: rgb(74, 25, 129);
+  color: beige;
+  border: 2px solid #4caf50;
+}
+.button1:hover {
+  background-color: green;
+  color: white;
+}
+table {
+  margin-bottom: 20px;
+}
+#div1 {
+  background-color: rgb(53, 41, 155);
+  text-align: center;
+}
+#div2 {
+  background-color: gainsboro;
+  text-align: center;
+}
+#div3 {
+  background-color: wheat;
+  text-align: center;
+}
+#div4 {
+  background-color: oldlace;
+  text-align: center;
+}
+#div1,
+#div2,
+#div3,
+#div4 {
+  border: dashed;
+}
+form {
+  padding: 0 10px;
+  background-color: rgb(224, 200, 248);
+  font-style: italic;
+  border-style: solid;
+  font-weight: 900px;
+}
+input[type='button'] {
+  color: rgb(255, 255, 255);
+  background-color: rgb(5, 107, 196);
+  padding: 5px;
+  border-radius: 7px;
+  font-style: normal;
+}
+input[type='text']:focus {
+  background-color: rgb(233, 245, 255);
+  color: beige;
+  width: 50%;
+  transition: 2s;
+}
+#bg-sub {
+  transition: 0.4s;
+  width: 50%;
+}
+#bg-sub:hover {
+  color: aliceblue;
+  background-color: green;
+}
+#main {
+  max-width: 450px;
+  margin: 0 auto;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+table {
+  display: inline-table;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+p {
+  display: inline-block;
+  width: 50%;
+}
