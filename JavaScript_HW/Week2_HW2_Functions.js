@@ -8,8 +8,8 @@ function maxOfTwoNumbers(x, y) {
 }
 console.log(`Max of 2 numbers: ${maxOfTwoNumbers(4, 5)}`);
 // Define a function maxOfThree that takes three numbers as arguments and returns the largest of them.
-var maxOfThree = (x, y, z) => {return x, y, z;};
-console.log(`Max of 3 numbers: ${maxOfThree(1, 2, 3)}`);
+var maxOfThree = (x, y, z) => {return (x > y && x > z) ? x : ((y > z) ? y : z);};
+console.log(`Max of 3 numbers: ${maxOfThree(1, 9, 3)}`);
 // Write a function isCharacterAVowel that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
 function isCharacterAVowel(x) {
   if (x.toLowerCase() === "a" || x.toLowerCase() === "e" || x.toLowerCase() === "i" || x.toLowerCase() === "o" || x.toLowerCase() === "u") {
