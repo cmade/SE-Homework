@@ -2,7 +2,9 @@
 var cookie = 4;
 var pay = 10;
 var quarters = 0;
+
 for(var count = 0; count <  pay - cookie; count++){  
-  quarters += 4
+  quarters += 4;
 }
+
 console.log(quarters);
