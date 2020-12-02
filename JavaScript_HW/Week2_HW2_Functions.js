@@ -108,7 +108,7 @@ function obj(str) {
   }
   return newObj; ;
 }
-console.log(`This is an object: ${JSON.stringify(obj("Per Scholas"))}`);
+console.log(`This is an object: ${JSON.stringify(obj("Clive Mangerere"))}`);
 
 // {
 //   a: 1,

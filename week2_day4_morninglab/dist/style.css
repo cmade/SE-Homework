@@ -1,0 +1,16 @@
+#container {
+  display: grid;
+  grid-template-columns: 100px;
+  grid-template-rows: 100px auto;
+  grid-gap: 10px;
+  justify-content: center;
+  align-content: center;
+}
+#a, #b{
+  width: 20px;
+  justify-self: center;
+  
+}
+#result {
+  text-align: center;
+}
