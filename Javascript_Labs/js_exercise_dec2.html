@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Exercise</title>
+</head>
+<body>
+  <h1 id="one" style="display: none;">Thing 1</h1>
+  <h1 id="two">Thing 2</h1>
+  <h1 id="three">Thing 3</h1>
+  <button onclick="one()" >Display 1</button>
+  <button onclick="two()">Hide 2</button>
+  <button onclick="three()">Resize 3</button>
+  <script>
+    function one() {
+      document.getElementById("one").style.display="block";
+    }
+    function two() {
+      document.getElementById("two").style.visibility="hidden";
+    }
+    function three() {
+      document.getElementById("three").style.fontSize="200px";
+    }
+  </script>
+</body>
+</html>

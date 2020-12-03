@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form name="Calc" border=4>
+    <table>
+      <tr>
+        <input type="text" name="Input" size="16">
+      </tr>
+      <tr>
+        <input type="text" name="one" value="1" onclick="Calc.Input.value+='1'">
+        <input type="text" name="two" value="2" onclick="Calc.Input.value+='2'">
+      </tr>
+      <tr>
+        <input type="button" name="plus" value="+" onclick="Calc.Input.value+='+'">
+        <input type="button" name="DoIt" value="DoIt" onclick='Calc.Input.value'=eval(Calc.Input.value)'>
+        <input type="button" name="avg" value="Average" onclick="Calc.Input.value">
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
