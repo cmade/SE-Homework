@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100vh;
+}
+.child {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  opacity: 0.5;
+}
+.child:hover {
+  opacity: 0;
+  cursor: pointer;
+}
+
+body {
+  background-image: radial-gradient(white, lightblue);
+}
