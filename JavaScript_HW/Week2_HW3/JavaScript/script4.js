@@ -29,7 +29,7 @@ document.addEventListener('keydown', (e) => {
   if(e.keyCode == 13 && input.value > 0){
     p.style.display = "flex";
     input.style.display = "none";
-    var id = setInterval(myTimer, 100);
+    var id = setInterval(myTimer, 1000);
     input = Number(input.value);
     function myTimer() {
       input == minutes ? clearInterval(id) : isMinute();

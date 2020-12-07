@@ -19,7 +19,7 @@ function checkTime(i) {
   return i < 10 ? i = "0" + i : i;
 }
 button.addEventListener('click', (e) => {
-  var id = setInterval(myTimer, 100);
+  var id = setInterval(myTimer, 1000);
   time = Number(time.value);
   function myTimer() {
     time == minutes ? clearInterval(id) : isMinute();
