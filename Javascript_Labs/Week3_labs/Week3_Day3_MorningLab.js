@@ -17,7 +17,7 @@ class VendingMachine {
   }
 }
 
-let vendingMachine = new VendingMachine(
+const vendingMachine = new VendingMachine(
   ['Snickers', 'Skittles', 'M&Ms'],
   [2, 1, 3]
 );

@@ -24,6 +24,6 @@ class Nemo extends Fish {
   }
 }
 
-var nemo = new Nemo('nemo', 'green');
+const nemo = new Nemo('nemo', 'green');
 
 console.log(nemo.swim() + ' and is ' + nemo.color);

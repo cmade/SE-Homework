@@ -29,10 +29,10 @@ class Animal {
 }
 let rabbit = new Animal('Bob', 29, 'green', 2, 'spit fire');
 console.log(rabbit.userSuperPower());
-let t1 = new Animal('Tim', 49, 'blue', 1, 'throw ice');
-console.log(t1.userSuperPower());
-let bean = new Animal('Cathy', 59, 'orang', 3, 'shoot lasers');
-console.log(bean.userSuperPower());
+let dog = new Animal('Tim', 49, 'blue', 1, 'throw ice');
+console.log(dog.userSuperPower());
+let cat = new Animal('Cathy', 59, 'orang', 3, 'shoot lasers');
+console.log(cat.userSuperPower());
 
 class User {
   constructor(firstName, lastName, department) {
@@ -40,8 +40,9 @@ class User {
     this.lastName = lastName;
     this.department = department;
   }
-  changeDepartment() {
-    return `${this.firstName} ${this.lastName} is from ${this.department}'s new departiment`;
+  changeDepartment(newDep) {
+    this.department = newDep;
+    return `${this.firstName} ${this.lastName} is from the ${this.department} departiment`;
   }
 }
 let user1 = new User('Jeff', 'Zip', 'hr');
@@ -49,4 +50,4 @@ console.log(user1.changeDepartment());
 let user2 = new User('Lisa', 'Dip', 'accounting');
 console.log(user2.changeDepartment());
 let user3 = new User('Bart', 'Drop', 'art');
-console.log(user3.changeDepartment());
+console.log(user3.changeDepartment('Biology'));
