@@ -15,9 +15,7 @@ li {
   max-width: 275px;
   animation: fadeIn 2s forwards;
 }
-form {
-  text-align: center;
-}
+
 input:first-child {
   margin-bottom: 20px;
   width: 193px;
@@ -46,6 +44,9 @@ h4 {
   width: 175px;
   text-align: center;
   animation: fadeIn 2s forwards;
+}
+#inputCenter {
+  text-align: center;
 }
 @keyframes fadeIn {
   0% {
