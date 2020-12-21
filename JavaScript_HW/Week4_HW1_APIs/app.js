@@ -10,6 +10,13 @@ $(() => {
     }
     let container = document.getElementById('container');
     container.style.display = 'block';
+
+    console.log(button);
+    //Ignore the bu
+    if (button != 'NYPD Response') {
+      $('ol').html(``);
+    }
+
     $.ajax({
       url:
         'https://data.cityofnewyork.us/resource/erm2-nwe9.json?borough=' +
@@ -36,7 +43,7 @@ $(() => {
           <div ><strong>Resolution description</strong>:<span><br><section>${
             data[index].resolution_description
           }</section></span></div>
-          <input type="submit" value="NYPD Response" onclick="response(${count.toString()})" class="btn btn-warning">
+          <input type="submit" value="NYPD Response" onclick="response(${count.toString()})" class="btn btn-warning" id="bit">
           </li>
           
           <hr>
