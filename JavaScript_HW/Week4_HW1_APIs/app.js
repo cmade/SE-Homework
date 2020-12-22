@@ -58,7 +58,7 @@ $(() => {
     );
   });
 });
-// This function will animation the click of the NYPD response
+// This function will animate the click of the NYPD response
 function response(x) {
   var myNodelist = document.querySelectorAll('div');
   console.log(x);

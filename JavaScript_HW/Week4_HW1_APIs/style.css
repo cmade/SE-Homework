@@ -1,3 +1,4 @@
+/*Centers the form on the page*/
 form {
   display: flex;
   flex-direction: column;
@@ -10,6 +11,7 @@ form {
 span {
   margin-left: 10px;
 }
+/*Displays the list style and adds the fade in animation*/
 li {
   margin-top: 50px;
   margin-bottom: 10px;
@@ -23,6 +25,7 @@ input:first-child {
   font-size: 1.7em;
   text-align: center;
 }
+/*Makes sure the text for the NYPD response is invisible until the button is clicked*/
 div {
   display: none;
 }
@@ -37,6 +40,7 @@ h4 {
 #inputCenter {
   text-align: center;
 }
+/*Animation allows for the fade in of elements on the page*/
 @keyframes fadeIn {
   0% {
     opacity: 0;
