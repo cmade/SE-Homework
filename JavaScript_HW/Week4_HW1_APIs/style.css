@@ -11,6 +11,7 @@ span {
   margin-left: 10px;
 }
 li {
+  margin-top: 50px;
   margin-bottom: 10px;
   max-width: 275px;
   animation: fadeIn 2s forwards;
@@ -25,26 +26,14 @@ input:first-child {
 div {
   display: none;
 }
-li {
-  margin-top: 50px;
-  animation: fadeIn 2s forwards;
-}
+
 #reset {
   padding-bottom: 50px;
 }
 h4 {
   padding-top: 20px;
 }
-#container {
-  display: none;
-  bottom: 50px;
-  right: 100px;
-  position: fixed;
-  margin-left: 150px;
-  width: 175px;
-  text-align: center;
-  animation: fadeIn 2s forwards;
-}
+
 #inputCenter {
   text-align: center;
 }

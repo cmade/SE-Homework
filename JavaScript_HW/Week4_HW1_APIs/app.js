@@ -8,11 +8,9 @@ $(() => {
     if (userInput < 1) {
       userInput = 10;
     }
-    let container = document.getElementById('container');
-    container.style.display = 'block';
 
     console.log(button);
-    //Ignore the bu
+    //Reset the ordered list if the burough buttton is clicked but ignore the NYPD response button
     if (button != 'NYPD Response') {
       $('ol').html(``);
     }
@@ -70,7 +68,4 @@ function response(x) {
     },
     'slow'
   );
-}
-function myReset() {
-  location.reload(true);
 }
