@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>TO DO APP</title>
+</head>
+<body>
+  <!--This section is for the form & inputs-->
+  <section>
+    <form >
+      <h1>What To Do</h1>
+      <input type="text"  id="input-box"/>
+      <input type="submit" value='Add'>
+    </form>
+      <!--This section is for the todo list and the completed list-->
+    <main class="grid-container">
+      <div class="grid-item">
+        <h2 >Things to do</h2>
+        <ul  id="todo">
+        </ul>
+      </div>
+      <div class="grid-item">
+        <h2 >Things that are done</h2>
+        <ul  id="complete">
+        </ul>
+      </div>
+      
+    </main>
+    
+  </section>
+  
+
+  <script src='https://code.jquery.com/jquery-3.4.1.min.js' 
+  type='text/javascript'></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+</html>
