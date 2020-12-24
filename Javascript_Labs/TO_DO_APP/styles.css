@@ -1,12 +1,13 @@
 /*Centered the section containing the foem*/
 section {
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 20vh;
 }
+
 h1 {
   text-align: center;
 }
@@ -24,17 +25,23 @@ h1 {
 ul {
   list-style: none;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 li {
   padding: 2px;
+  padding-top: 20px;
   margin: 10px;
-  min-width: 200px;
+  min-width: 300px;
   min-height: 100px;
   border-radius: 20px;
   position: relative;
 }
 p {
   color: #fff;
+  font-size: 1.5em;
 }
 h2 {
   text-align: center;
