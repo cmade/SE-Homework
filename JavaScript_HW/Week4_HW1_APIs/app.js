@@ -4,12 +4,12 @@ $(() => {
     // This will grab the user input
     let userInput = $('input[type="number"]').val();
     const button = $(e.target).val();
-    console.log(button.toUpperCase());
+
     if (userInput < 1) {
       userInput = 10;
     }
 
-    console.log(button);
+    console.log(typeof e.target);
     //Reset the ordered list if the burough buttton is clicked but ignore the NYPD response button
     if (button != 'NYPD Response') {
       $('ol').html(``);
@@ -46,8 +46,6 @@ $(() => {
           
           <hr>
           `);
-
-            console.log(data[index]);
           }
         }
       },
@@ -61,7 +59,7 @@ $(() => {
 // This function will animate the click of the NYPD response
 function response(x) {
   var myNodelist = document.querySelectorAll('div');
-  console.log(x);
+
   $(myNodelist[x]).animate(
     {
       height: 'toggle',
