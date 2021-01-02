@@ -45,3 +45,10 @@ class Actor {
     var alienCount = 0;
   }
 }
+//Define six aliens
+function alienAttack() {
+  $('#game-text').append(
+    `<div class="action">${alienArray[alienCount].name} ${alienCount + 1}'s health is ${
+      alienArray[alienCount].hull
+    }<br></div>`
+  );
