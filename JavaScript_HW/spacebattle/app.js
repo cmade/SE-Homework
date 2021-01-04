@@ -1,6 +1,4 @@
-//Define an array six Aliens
 const alienArray = [];
-//Count the number of Aliens
 var alienCount = 0;
 //Define an actor class for the game
 class Actor {
@@ -11,10 +9,15 @@ class Actor {
     this.accuracy = accuracy;
   }
   attack() {
-    if (alienCount >= 6) {
-      $('#game-text').append('');
+    if (alienCount > 4) {
       $('#game-text').append(
-        `<div class="action">You won! ${spaceShip.name} has defeated the aliens!<br></div>`
+        `<div class="action">You won! ${
+          spaceShip.name
+        } has defeated the aliens!<br></div><div class="action">${
+          alienArray[alienCount].name
+        } ${
+          alienCount + 1
+        } is destroyed<br> Type "restart" to play again!</div>`
       );
     } else {
       if (Math.random() < spaceShip.accuracy) {
@@ -26,7 +29,7 @@ class Actor {
               alienCount + 1
             } is destroyed<br></div>`
           );
-          i++;
+          alienCount++;
         } else {
           alienAttack();
         }
@@ -52,10 +55,11 @@ function alienAttack() {
       alienCount + 1
     }'s health is ${alienArray[alienCount].hull}<br></div>`
   );
+
   setTimeout(function () {
     $('#game-text').append(
       `<div class="action">${alienArray[alienCount].name} ${
-        i + 1
+        alienCount + 1
       } is launching an attack...<br></div>`
     );
     if (Math.random() < alienArray[alienCount].accuracy) {
@@ -68,7 +72,7 @@ function alienAttack() {
     } else {
       $('#game-text').append(
         `<div class="action">${alienArray[alienCount].name} ${
-          i + 1
+          alienCount + 1
         } has missed...<br></div>`
       );
     }
@@ -77,7 +81,7 @@ function alienAttack() {
     $('#game-text').append(`${spaceShip.name} is dead! Game Over`);
   }
 }
-//Define six aliens
+
 for (let i = 0; i < 6; i++) {
   let alien = new Actor(
     'Alien',
@@ -88,3 +92,65 @@ for (let i = 0; i < 6; i++) {
   );
   alienArray.push(alien);
 }
+// Define your spaceship object
+let spaceShip = new Actor('USS Schwarzenegger', 20, 5, 0.7, 6);
+
+//Get random number between a range
+function getRand(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.abs(Math.floor(Math.random() * (max - min) + min));
+}
+//Get a random decimal
+function getRandomDec(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+var commands = [
+  'Type in the word: "attack" - to damage enemy',
+  'Type in the word: "retreat" - to escape enemy',
+  'Type in the word: "restart" - to restart game',
+];
+
+function showHelp() {
+  $('#game-text').append('<p>Here are the possible commands: </p>');
+  $('#game-text').append('<p><ul>');
+  for (var i = 0; i < commands.length; i++) {
+    $('#game-text').append('<li>' + commands[i] + '</li>');
+  }
+  $('#game-text').append('</ul></p>');
+}
+
+function restart() {
+  location.reload();
+}
+
+function playerInput(input) {
+  var command = input.split(' ')[0];
+  switch (command) {
+    case 'help':
+      showHelp();
+      break;
+    case 'attack':
+      spaceShip.attack();
+      break;
+    case 'retreat':
+      spaceShip.retreat();
+      break;
+    case 'restart':
+      restart();
+      break;
+    default:
+      $('#game-text').append('<p>Invalid command!</p>');
+  }
+}
+
+$(document).ready(function () {
+  $(document).keypress(function (key) {
+    if (key.which === 13 && $('#user-input').is(':focus')) {
+      var value = $('#user-input').val().toLowerCase();
+      $('#user-input').val('');
+      playerInput(value);
+    }
+  });
+});
