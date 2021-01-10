@@ -89,7 +89,11 @@ var visits = [5850, 52122, 148825];
 //Chartjs: months
 var months = ['November', 'December', 'January'];
 //Chartjs: target myChart id in visitors compononent
-var ctx = document.getElementById('myChart');
+var ctx = document.getElementById('myChart').getContext('2d');
+//Chartjs: gradient added to line chart background
+var gradientFill = ctx.createLinearGradient(800, 0, 100, 0);
+gradientFill.addColorStop(0, 'rgba(244, 144, 128, 1)');
+gradientFill.addColorStop(1, 'rgba(128, 182, 244, 0.6)');
 //Chartjs: describe new chart object
 var myChart = new Chart(ctx, {
   type: 'line',
@@ -99,8 +103,8 @@ var myChart = new Chart(ctx, {
       {
         label: 'Number of Visitors',
         data: visits,
-        backgroundColor: ['rgba(54, 162, 235, 0.6)'],
-        pointBorderColor: 'orange',
+        backgroundColor: gradientFill,
+        pointBorderColor: 'red',
       },
     ],
   },
