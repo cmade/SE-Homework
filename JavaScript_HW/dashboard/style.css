@@ -17,14 +17,7 @@
 /*Body of html font for all text and color*/
 body {
   font-family: sans-serif;
-  background: linear-gradient(
-    to bottom right,
-    rgba(194, 2, 69, 1) 0%,
-    rgba(31, 28, 104, 1) 8%,
-    rgba(27, 29, 105, 1) 47%,
-    rgba(33, 28, 104, 1) 92%,
-    rgba(177, 5, 73, 1) 100%
-  );
+  background: darkblue;
   height: 98vh;
   display: flex;
   flex-direction: column;
@@ -41,7 +34,7 @@ body {
   grid-gap: 20px;
   background-color: rgba(0, 0, 0, 0.3);
   padding: 50px;
-  height: 80vh;
+  height: 83vh;
   border-radius: 10px;
 }
 /*Vertical navigation bar*/
@@ -66,7 +59,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.3);
   color: #f2eef5;
   text-align: center;
-  height: 30vh;
+  height: 34vh;
   border-radius: 10px;
 }
 /*Rating section style*/
@@ -77,7 +70,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.3);
   color: #f2eef5;
   text-align: center;
-  height: 30vh;
+  height: 34vh;
   border-radius: 10px;
 }
 /*Sentiment section style*/
@@ -88,7 +81,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.3);
   color: #f2eef5;
   text-align: center;
-  height: 30vh;
+  height: 34vh;
   border-radius: 10px;
 }
 /*Visitor section style*/
@@ -138,11 +131,76 @@ canvas {
 @media only screen and (max-width: 425px) {
   /* For mobile phones: */
   .main {
+    display: grid;
     grid-template-areas:
       'nav'
       'main1'
       'main2'
       'main3'
       'footer';
+    grid-gap: 20px;
+    padding: 50px;
+    background: none !important;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    border-radius: 10px;
+  }
+  /*Review section style*/
+  .reviews {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #f2eef5;
+    text-align: center;
+    height: 30vh;
+    border-radius: 10px;
+  }
+  /*Sentiment section style*/
+  .sentiment {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #f2eef5;
+    text-align: center;
+    height: 40vh;
+    border-radius: 10px;
+  }
+  /*Rating section style*/
+  .rating {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #f2eef5;
+    text-align: center;
+    height: 30vh;
+    border-radius: 10px;
+  }
+  .visitors {
+    margin: 0;
+    padding: 0;
+    width: 63vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #f2eef5;
+    text-align: center;
+    height: 30vh;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 24px !important;
+  }
+  canvas {
+    display: none !important;
   }
 }
