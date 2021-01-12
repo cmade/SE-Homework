@@ -18,7 +18,7 @@
 body {
   font-family: sans-serif;
   background: linear-gradient(
-    166deg,
+    to bottom right,
     rgba(194, 2, 69, 1) 0%,
     rgba(31, 28, 104, 1) 8%,
     rgba(27, 29, 105, 1) 47%,
@@ -134,4 +134,15 @@ canvas {
   position: relative;
   width: 62vw !important;
   height: 38vh !important;
+}
+@media only screen and (max-width: 425px) {
+  /* For mobile phones: */
+  .main {
+    grid-template-areas:
+      'nav'
+      'main1'
+      'main2'
+      'main3'
+      'footer';
+  }
 }
