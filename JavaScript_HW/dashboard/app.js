@@ -52,10 +52,10 @@ class Sidebar extends React.Component {
   render() {
     return (
       <nav className="item1">
-        <a href="https://github.com/cmade" target="_blank" class="active">
+        <a href="https://github.com/cmade" target="_blank" className="active">
           <img src="https://avatars2.githubusercontent.com/u/10188746?s=460&u=ebd07b3fe70fbaf057d8305f7e611d70be2448e1&v=4" />
         </a>
-        <a href="#Dashboard" class="active">
+        <a href="#Dashboard" className="active">
           Dashboard
         </a>
         <a href="#Widget">Widget</a>
