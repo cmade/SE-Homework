@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #f7fef7;
+
+  border: solid #296a75 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 500px;
+  height: 98vh;
+  overflow: auto;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+h1 {
+  color: #5acec4;
+  padding: 20px;
+  text-align: center;
+}
+span {
+  color: red;
+}
+.yellow {
+  color: #fee771;
+}
+form {
+  text-align: center;
+}
+#taco {
+  background-color: #7a0800; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
