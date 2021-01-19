@@ -9,21 +9,44 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: brown;
+  color: rgb(255, 255, 255);
 }
 .container {
-  width: 150px;
+  width: 250px;
   text-align: center;
   border-radius: 10px;
 }
 input {
   margin: 10px;
+  padding: 12px;
+  font-size: 18px;
 }
 
 .button {
-  margin: 30px;
+  margin: 50px;
+  background-color: #ead37a;
+  border: none;
+  color: #3e5f73;
+  padding: 5px 5px;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
 }
 h2 {
-  margin-top: 150px;
+  margin-top: 50px;
   margin-bottom: 30px;
   white-space: nowrap;
+  font-size: 40px;
+}
+.buton {
+  background-color: #ead37a;
+  border: none;
+  color: #3e5f73;
+  padding: 5px 5px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 5px;
 }

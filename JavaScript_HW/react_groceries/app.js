@@ -13,14 +13,16 @@ class App extends React.Component {
 
   removeItem = (e) => {
     let count = 0;
-    console.log();
+    var array = [...this.state.groceries]; // make a separate copy of the array
+    var index = array.indexOf(groceries[count]);
     this.state.groceries.map((grocery) => {
-      if (grocery.item == e.target.id && groceries[count] == grocery) {
-        console.log(groceries[count]);
+      if (grocery.item == e.target.id) {
+        console.log(array);
+        array.splice(index, 1);
+        this.setState({ groceries: array });
       }
       count++;
     });
-    e.target.parentElement.remove();
   };
   submit = (event) => {
     event.preventDefault();
@@ -75,8 +77,9 @@ class App extends React.Component {
                   {grocery.item}
                   <button
                     onClick={this.removeItem}
-                    groceries={this.state.groceries}
+                    groceries={this.props.groceries}
                     id={grocery.item}
+                    className="buton"
                   >
                     remove
                   </button>
@@ -111,7 +114,7 @@ const groceries = [
     brand: 'Double Stuffed Oreos',
     units: '16 oz',
     quantity: 1,
-    isPurchased: true,
+    isPurchased: false,
   },
 ];
 ReactDOM.render(<App />, document.querySelector('.container'));
